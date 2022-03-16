@@ -3,3 +3,6 @@ index.php: saving user information is done here.
 connection.php: does the task of database pdo connection.
 <br>
 api.php: api to retrieve data given username as a parameter.
+<br>
+<br>
+db.sql: provides database table structure.
