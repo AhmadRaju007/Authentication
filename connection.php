@@ -5,8 +5,6 @@ function connect(){
     $pass= "test1234"; //database password
     $dbname="aiva"; //database name
 
-//    $conn= new mysqli($dbHost, $user, $pass, $dbname); //setup mysql connection
-
     $conn = new PDO("mysql:host=$dbHost;dbname=$dbname", $user, $pass);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

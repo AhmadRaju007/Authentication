@@ -2,6 +2,8 @@
 PHP version: 7.3.*<br>
 mysql version: 15.1
 
+<b>Github:</b>https://github.com/AhmadRaju007/Sample_Users<br>
+
 index.php: saving user information is done here. 
 <br>
 connection.php: does the task of database pdo connection.

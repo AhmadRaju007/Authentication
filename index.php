@@ -1,18 +1,18 @@
 <?php
-if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_confirmation'])){
+if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_confirmation'])){  //gets username, password and confirmed password
     $uName= $_POST['username'];
     $pass= $_POST['password'];
     $passConfirm= $_POST['password_confirmation'];
 
-    if($pass === $passConfirm){
+    if($pass === $passConfirm){                         //if two password confirmed
         include('connection.php');
-        $conn= connect();
+        $conn= connect();                               //establishes connection
 
-        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");
-        $stmt->bindParam(':username', $uName);
-        $stmt->bindParam(':password', $pass);
+        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (:username, :password)");     //prepare statement
+        $stmt->bindParam(':username', $uName);      //parameters binded
+        $stmt->bindParam(':password', $pass);       //parameters binded
 
-        if($stmt->execute()){
+        if($stmt->execute()){                                   //query successfully executed
             echo "Successfully Registered!";
             $conn= null;
         }
@@ -26,6 +26,7 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['passw
 }
 ?>
 
+<!-------- html part starts here ------------>
 <html>
     <head>
         <title>Registration Form </title>
