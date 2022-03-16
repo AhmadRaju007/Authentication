@@ -8,8 +8,8 @@ connection.php: does the task of database pdo connection.
 <br>
 api.php: api to retrieve data given username as a parameter.
 <br>
-<br>
 db.sql: provides database table structure.
+<br>
 <br>
 NB: API can be connected at {{base_url}}/api.php?username={{your_username}}
 <br>
